@@ -3,377 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Professional Government Exam Preparation</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>LAKSHYANISCHAYA - Government Exam Preparation</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
     <style>
-        /* Reset CSS */
+        /* Basic Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f3f3f3;
+            font-family: 'Roboto', sans-serif;
             color: #333;
-            overflow-x: hidden;
+            background-color: #f4f4f4;
+            line-height: 1.6;
         }
+
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 5%;
-            background-color: #0044cc;
+            background: #004d40;
             color: #fff;
+            padding: 20px;
+            text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
-            flex-wrap: wrap;
         }
-        header .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
+
+        header img {
+            width: 150px;
+            height: auto;
         }
+
         nav ul {
-            display: flex;
             list-style: none;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
         }
+
         nav ul li {
-            margin-left: 20px;
+            margin: 0 15px;
         }
+
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.1em;
             transition: color 0.3s;
         }
+
         nav ul li a:hover {
-            color: #ffa500;
+            color: #a5d6a7;
         }
-        .hero-section {
-            width: 100%;
-            height: 90vh;
-            background: url('https://images.unsplash.com/photo-1494178270175-e96de2971df9?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
+
+        .hero {
+            background: url('https://plus.unsplash.com/premium_photo-1694743671394-60034a1b2f65?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bW90aXZhdGlvbmFsJTIwcXVvdGVzfGVufDB8fDB8fHww') no-repeat center center/cover;
             color: #fff;
+            text-align: center;
+            padding: 120px 20px;
         }
-        .hero-section h1 {
-            font-size: 3rem;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-        .hero-section p {
-            font-size: 1.5rem;
+
+        .hero h1 {
+            font-size: 3em;
             margin-bottom: 20px;
         }
-        .hero-section .btn {
-            padding: 15px 30px;
-            background-color: #ffa500;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: bold;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+
+        .hero p {
+            font-size: 1.2em;
         }
-        .hero-section .btn:hover {
-            background-color: #ff8000;
-        }
-        .services {
-            padding: 50px 5%;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-        .service-box {
+
+        .section {
+            padding: 60px 20px;
             background: #fff;
-            padding: 30px;
-            margin: 15px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            flex-basis: 30%;
             text-align: center;
-            transition: transform 0.3s;
         }
-        .service-box:hover {
-            transform: translateY(-10px);
-        }
-        .service-box h3 {
-            margin-bottom: 10px;
-            color: #0044cc;
-        }
-        .service-box p {
+
+        .section h2 {
+            font-size: 2.5em;
+            color: #004d40;
             margin-bottom: 20px;
         }
-        .posts {
-            padding: 50px 5%;
-            background-color: #f9f9f9;
+
+        .about-content, .latest-posts, .contact-form, .team-section {
+            margin: 20px auto;
+            max-width: 1200px;
         }
-        .post-box {
-            background: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .posts h2 {
-            text-align: center;
-            margin-bottom: 30px;
-            color: #0044cc;
-        }
-        .profiles {
-            padding: 50px 5%;
-            background-color: #f9f9f9;
-            text-align: center;
-        }
-        .profiles h2 {
-            font-size: 2rem;
-            margin-bottom: 30px;
-            color: #0044cc;
-        }
-        .profile-card {
-            display: inline-block;
-            background: #fff;
-            margin: 15px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
-            text-align: center;
-        }
-        .profile-card img {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-        .profile-card h3 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .profile-card p {
-            color: #777;
-        }
-        .motivations {
-            padding: 50px 5%;
-            text-align: center;
-        }
-        .motivations img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
+
+        .about-content p, .latest-posts p, .team-member p {
+            color: #555;
             margin: 10px 0;
         }
-        .contact {
-            padding: 50px 5%;
-            background-color: #fff;
+
+        .team-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
         }
-        .contact h2 {
+
+        .team-member {
+            background: #e0f2f1;
+            border: 2px solid #004d40;
+            border-radius: 10px;
+            padding: 20px;
             text-align: center;
-            margin-bottom: 30px;
-            color: #0044cc;
+            width: 280px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
-        .contact-form {
+
+        .team-member img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+        }
+
+        .team-member h4 {
+            margin: 10px 0;
+            color: #004d40;
+        }
+
+        .team-member:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .contact-form form {
+            background: #e0f2f1;
+            padding: 30px;
+            border-radius: 10px;
             max-width: 600px;
             margin: 0 auto;
         }
+
         .contact-form input, .contact-form textarea {
             width: 100%;
             padding: 15px;
-            margin-bottom: 20px;
-            border: 1px solid #ddd;
+            margin: 10px 0;
+            border: 1px solid #004d40;
             border-radius: 5px;
+            font-size: 1em;
         }
+
         .contact-form button {
-            width: 100%;
-            padding: 15px;
-            background-color: #0044cc;
+            background: #004d40;
             color: #fff;
             border: none;
+            padding: 15px;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            font-size: 1.1em;
+            transition: background 0.3s;
         }
+
         .contact-form button:hover {
-            background-color: #002a80;
+            background: #00251a;
         }
+
         footer {
-            background-color: #0044cc;
+            background: #004d40;
             color: #fff;
-            padding: 30px 5%;
             text-align: center;
+            padding: 20px 0;
         }
-        footer .footer-socials {
-            margin-bottom: 15px;
-        }
-        footer .footer-socials a {
-            color: #fff;
-            margin: 0 10px;
-            font-size: 1.5rem;
-            transition: color 0.3s;
-        }
-        footer .footer-socials a:hover {
-            color: #ffa500;
-        }
-        footer p {
-            margin: 10px 0;
-        }
+
         footer a {
-            color: #ffa500;
+            color: #a5d6a7;
             text-decoration: none;
-            font-weight: bold;
-            transition: color 0.3s;
         }
+
         footer a:hover {
-            color: #fff;
+            text-decoration: underline;
         }
+
         @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
+            .hero {
+                padding: 80px 10px;
             }
-            nav ul {
-                flex-direction: column;
-                padding: 0;
-            }
-            nav ul li {
-                margin: 10px 0;
-            }
-            .services {
+
+            .team-section {
                 flex-direction: column;
                 align-items: center;
             }
-            .service-box {
-                flex-basis: 90%;
-            }
-            .profiles .profile-card {
-                width: 80%;
+
+            .team-member {
+                width: 90%;
             }
         }
+
+        .post-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        .post-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .post-item h3 {
+            margin: 15px 0;
+            color: #004d40;
+        }
+
+        .post-item p {
+            color: #555;
+        }
+
     </style>
 </head>
 <body>
+
     <!-- Header -->
     <header>
-        <div class="logo">Lakshya Nishchaya</div>
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjVsD2dnvPupa8YhoqnYHEiDHoBgqO4OQiLZ6lX1nTibVeO_mB89VMulwRS_p1NArgSJVIYJBCzTcq-M4DqgIfm-UMxK9J3gLt_9-UwxICwEks2vEnKVA4Tkbsj0942FBYQD-vT8hRqKQ8ao8MkR1cfje5BlEKM-B7JcCNxDnVFaQmkewSdJCfNojcpGE0=s150" alt="LAKSHYANISCHAYA Logo">
         <nav>
             <ul>
                 <li><a href="#about">About Us</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#posts">Posts</a></li>
-                <li><a href="#profiles">Profiles</a></li>
-                <li><a href="#motivations">Motivations</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#team">Our Team</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-section">
-        <div>
-            <h1>Excel in Your Government Exams</h1>
-            <p>Personalized coaching, study materials, and mock tests to help you succeed.</p>
-            <a href="#contact" class="btn">Get Started</a>
+    <section class="hero">
+        <h1>Welcome to LAKSHYANISCHAYA</h1>
+        <p>Your Ultimate Destination for Government Exam Preparation</p>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <p>LAKSHYANISCHAYA is dedicated to providing top-notch resources and support for individuals preparing for government exams. Our goal is to help you achieve success with comprehensive study materials, expert guidance, and a community of like-minded individuals.</p>
         </div>
     </section>
 
-    <!-- Posts Section -->
-    <section id="posts" class="posts">
+    <!-- Latest Posts Section -->
+    <section class="latest-posts">
         <h2>Latest Posts</h2>
-        <!-- Posts will be injected here by JavaScript -->
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="service-box">
-            <h3>Online Coaching</h3>
-            <p>Get personalized coaching sessions with experienced tutors to guide you through your exam preparation.</p>
-        </div>
-        <div class="service-box">
-            <h3>Study Materials</h3>
-            <p>Access a comprehensive collection of study materials including textbooks, notes, and practice papers.</p>
-        </div>
-        <div class="service-box">
-            <h3>Mock Tests</h3>
-            <p>Practice with timed mock tests to evaluate your progress and improve your exam performance.</p>
+        <div id="posts-container">
+            <!-- Dynamic content will be inserted here -->
         </div>
     </section>
 
-    <!-- Profiles Section -->
-    <section id="profiles" class="profiles">
-        <h2>Meet Our Experts</h2>
-        <div class="profile-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi3JNzBNr3KTfXuUiGCB9XNgDNLI6ATNIdFa_sKGHR9FWGjrCuH5X4H69F&s=10" alt="Profile Picture">
-            <h3>Priya Sharma</h3>
-            <p>Priya Sharma is an expert in Indian polity with over 10 years of experience in teaching and coaching for government exams.</p>
-        </div>
-        <div class="profile-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOAefJbPdyyXctgX04mTWMNfQl198xcyZh7rxSZofyE3ybkFeIdf4EdDBi&s=10" alt="Profile Picture">
-            <h3>Ramya Kumari</h3>
-            <p>Ramya Kumari specializes in quantitative aptitude and has helped numerous students achieve high scores in competitive exams.</p>
-        </div>
-        <div class="profile-card">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYLTlOYXBJQinROjZeQ0bFhHKe935VgrDOZQPVHMZqutNWReruJ6eC2D4&s=10" alt="Profile Picture">
-            <h3>Meera Patel</h3>
-            <p>Meera Patel is a seasoned educator in English language skills and has a track record of improving students' communication abilities.</p>
+    <!-- Courses Section -->
+    <section id="courses" class="section">
+        <h2>Our Courses</h2>
+        <div class="course-list">
+            <!-- Add your courses here -->
+            <div class="course-item">
+                <h3>Advanced Government Exam Prep</h3>
+                <p>Comprehensive course covering all aspects of government exams, including practice tests and expert advice.</p>
+            </div>
+            <div class="course-item">
+                <h3>Exam Strategies and Tips</h3>
+                <p>Learn effective strategies and tips to tackle various types of government exams with confidence.</p>
+            </div>
+            <!-- Add more courses as needed -->
         </div>
     </section>
 
-    <!-- Motivations Section -->
-    <section id="motivations" class="motivations">
-        <h2>Stay Motivated</h2>
-        <img src="https://images.unsplash.com/photo-1564410267841-915d8e4d71ea?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Motivation Image">
-        <img src="https://images.unsplash.com/photo-1494178270175-e96de2971df9?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Motivation Image">
+    <!-- Team Section -->
+    <section id="team" class="section team-section">
+        <h2>Meet Our Team</h2>
+        <div class="team-member">
+            <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Team Member 1">
+            <h4>Rajesh Kumar</h4>
+            <p>Senior Instructor - Expert in Indian Polity and Governance</p>
+        </div>
+        <div class="team-member">
+            <img src="https://randomuser.me/api/portraits/women/22.jpg" alt="Team Member 2">
+            <h4>Priya Sharma</h4>
+            <p>Education Consultant - Specializing in Exam Strategies</p>
+        </div>
+        <div class="team-member">
+            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Team Member 3">
+            <h4>Amit Singh</h4>
+            <p>Test Preparation Specialist - Focused on Quantitative Aptitude</p>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
+    <!-- Contact Us Section -->
+    <section id="contact" class="section">
         <h2>Contact Us</h2>
-        <form class="contact-form" action="your-server-endpoint" method="post">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <div class="contact-form">
+            <form action="submit_form.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="phone" placeholder="Your Phone Number">
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="footer-socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>&copy; 2024 Lakshya Nishchaya. All Rights Reserved.</p>
-        <p><a href="#about">Back to Top</a></p>
+        <p>&copy; 2024 LAKSHYANISCHAYA. All Rights Reserved. | <a href="#contact">Contact Us</a></p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript to Fetch and Display Latest Posts -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('https://raw.githubusercontent.com/Govexam/GOVERNMENTEXAM/main/posts.json')
-                .then(response => response.json())
-                .then(data => {
-                    const postsContainer = document.querySelector('.posts');
-                    data.forEach(post => {
-                        const postElement = document.createElement('div');
-                        postElement.classList.add('post-box');
-                        postElement.innerHTML = `
-                            <h3>${post.title}</h3>
-                            <p>${post.content}</p>
-                            <p><strong>Published on:</strong> ${new Date(post.date).toLocaleDateString()}</p>
-                        `;
-                        postsContainer.appendChild(postElement);
-                    });
-                })
-                .catch(error => console.error('Error fetching posts:', error));
-        });
+        async function fetchPosts() {
+            const response = await fetch('https://raw.githubusercontent.com/Govexam/GOVERNMENTEXAM/main/posts.json');
+            const data = await response.json();
+            const postsContainer = document.getElementById('posts-container');
+            postsContainer.innerHTML = data.posts.map(post => `
+                <div class="post-item">
+                    <img src="${post.image}" alt="${post.title}">
+                    <h3>${post.title}</h3>
+                    <p><strong>${post.author}</strong> | ${post.date}</p>
+                    <div>${post.content}</div>
+                </div>
+            `).join('');
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchPosts);
     </script>
+
 </body>
 </html>
