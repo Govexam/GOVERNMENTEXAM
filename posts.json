@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Understanding Government Exams",
+      "date": "2024-09-01",
+      "author": "John Doe",
+      "content": "<p>Government exams are a crucial part of securing a stable job in the public sector. In this post, we will explore various types of exams and the best ways to prepare for them...</p>",
+      "image": "https://example.com/images/post1.jpg",
+      "tags": ["Exams", "Preparation", "Government"]
+    },
+    {
+      "id": "2",
+      "title": "Top 10 Tips for Cracking Civil Services",
+      "date": "2024-09-02",
+      "author": "Jane Smith",
+      "content": "<p>Cracking the civil services exam requires dedication and the right strategy. Here are the top 10 tips to help you achieve your goal...</p>",
+      "image": "https://example.com/images/post2.jpg",
+      "tags": ["Civil Services", "Tips", "Strategy"]
+    },
+    {
+      "id": "3",
+      "title": "How to Stay Motivated During Exam Preparation",
+      "date": "2024-09-03",
+      "author": "Alex Kumar",
+      "content": "<p>Staying motivated during long study hours can be challenging. This post provides practical tips to keep your spirits high and stay on track...</p>",
+      "image": "https://example.com/images/post3.jpg",
+      "tags": ["Motivation", "Preparation", "Exams"]
+    }
+  ]
+}
