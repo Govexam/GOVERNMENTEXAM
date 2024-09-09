@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Government Exam Preparation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f3f3f3;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            background-color: #0044cc;
+            color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+        }
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin-left: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+        nav ul li a:hover {
+            color: #ffa500;
+        }
+        .hero-section {
+            width: 100%;
+            height: 90vh;
+            background: url('https://images.unsplash.com/photo-1494178270175-e96de2971df9?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero-section h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .hero-section .btn {
+            padding: 15px 30px;
+            background-color: #ffa500;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .hero-section .btn:hover {
+            background-color: #ff8000;
+        }
+        .services {
+            padding: 50px 5%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .service-box {
+            background: #fff;
+            padding: 30px;
+            margin: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            flex-basis: 30%;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .service-box:hover {
+            transform: translateY(-10px);
+        }
+        .service-box h3 {
+            margin-bottom: 10px;
+            color: #0044cc;
+        }
+        .service-box p {
+            margin-bottom: 20px;
+        }
+        .posts {
+            padding: 50px 5%;
+            background-color: #f9f9f9;
+        }
+        .post-box {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .posts h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0044cc;
+        }
+        .profiles {
+            padding: 50px 5%;
+            background-color: #f9f9f9;
+            text-align: center;
+        }
+        .profiles h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #0044cc;
+        }
+        .profile-card {
+            display: inline-block;
+            background: #fff;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .profile-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+        .profile-card h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .profile-card p {
+            color: #777;
+        }
+        .motivations {
+            padding: 50px 5%;
+            text-align: center;
+        }
+        .motivations img {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 10px 0;
+        }
+        .contact {
+            padding: 50px 5%;
+            background-color: #fff;
+        }
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #0044cc;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #0044cc;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .contact-form button:hover {
+            background-color: #002a80;
+        }
+        footer {
+            background-color: #0044cc;
+            color: #fff;
+            padding: 30px 5%;
+            text-align: center;
+        }
+        footer .footer-socials {
+            margin-bottom: 15px;
+        }
+        footer .footer-socials a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        footer .footer-socials a:hover {
+            color: #ffa500;
+        }
+        footer p {
+            margin: 10px 0;
+        }
+        footer a {
+            color: #ffa500;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: #fff;
+        }
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                flex-direction: column;
+                padding: 0;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+            .services {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service-box {
+                flex-basis: 90%;
+            }
+            .profiles .profile-card {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Lakshya Nishchaya</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#posts">Posts</a></li>
+                <li><a href="#profiles">Profiles</a></li>
+                <li><a href="#motivations">Motivations</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div>
+            <h1>Excel in Your Government Exams</h1>
+            <p>Personalized coaching, study materials, and mock tests to help you succeed.</p>
+            <a href="#contact" class="btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Posts Section -->
+    <section id="posts" class="posts">
+        <h2>Latest Posts</h2>
+        <!-- Posts will be injected here by JavaScript -->
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="service-box">
+            <h3>Online Coaching</h3>
+            <p>Get personalized coaching sessions with experienced tutors to guide you through your exam preparation.</p>
+        </div>
+        <div class="service-box">
+            <h3>Study Materials</h3>
+            <p>Access a comprehensive collection of study materials including textbooks, notes, and practice papers.</p>
+        </div>
+        <div class="service-box">
+            <h3>Mock Tests</h3>
+            <p>Practice with timed mock tests to evaluate your progress and improve your exam performance.</p>
+        </div>
+    </section>
+
+    <!-- Profiles Section -->
+    <section id="profiles" class="profiles">
+        <h2>Meet Our Experts</h2>
+        <div class="profile-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQi3JNzBNr3KTfXuUiGCB9XNgDNLI6ATNIdFa_sKGHR9FWGjrCuH5X4H69F&s=10" alt="Profile Picture">
+            <h3>Priya Sharma</h3>
+            <p>Priya Sharma is an expert in Indian polity with over 10 years of experience in teaching and coaching for government exams.</p>
+        </div>
+        <div class="profile-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOAefJbPdyyXctgX04mTWMNfQl198xcyZh7rxSZofyE3ybkFeIdf4EdDBi&s=10" alt="Profile Picture">
+            <h3>Ramya Kumari</h3>
+            <p>Ramya Kumari specializes in quantitative aptitude and has helped numerous students achieve high scores in competitive exams.</p>
+        </div>
+        <div class="profile-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYLTlOYXBJQinROjZeQ0bFhHKe935VgrDOZQPVHMZqutNWReruJ6eC2D4&s=10" alt="Profile Picture">
+            <h3>Meera Patel</h3>
+            <p>Meera Patel is a seasoned educator in English language skills and has a track record of improving students' communication abilities.</p>
+        </div>
+    </section>
+
+    <!-- Motivations Section -->
+    <section id="motivations" class="motivations">
+        <h2>Stay Motivated</h2>
+        <img src="https://images.unsplash.com/photo-1564410267841-915d8e4d71ea?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Motivation Image">
+        <img src="https://images.unsplash.com/photo-1494178270175-e96de2971df9?q=80&w=1080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Motivation Image">
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" action="your-server-endpoint" method="post">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2024 Lakshya Nishchaya. All Rights Reserved.</p>
+        <p><a href="#about">Back to Top</a></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('https://raw.githubusercontent.com/Govexam/GOVERNMENTEXAM/main/posts.json')
+                .then(response => response.json())
+                .then(data => {
+                    const postsContainer = document.querySelector('.posts');
+                    data.forEach(post => {
+                        const postElement = document.createElement('div');
+                        postElement.classList.add('post-box');
+                        postElement.innerHTML = `
+                            <h3>${post.title}</h3>
+                            <p>${post.content}</p>
+                            <p><strong>Published on:</strong> ${new Date(post.date).toLocaleDateString()}</p>
+                        `;
+                        postsContainer.appendChild(postElement);
+                    });
+                })
+                .catch(error => console.error('Error fetching posts:', error));
+        });
+    </script>
+</body>
+</html>
